@@ -1,12 +1,15 @@
 # Step by step doc to create a quick & simple Stateful deployment of MongoDB in the Kubernetes Cluster
 ## Created the MongoDB Deployment and the service
 ```
-jayadmin@cloudshell:~/mongodb (kubetrain-331123)$ kubectl apply -f mongod.yaml                                                                                                                                                                    
-statefulset.apps/mongodb-standalone unchanged
-service/database created
+#jayadmin@cloudshell:~/mongodb (kubetrain-331123)$ kubectl apply -f mongod.yaml
+#deployment.apps/mongo-depl created
+#service/mongo-srv created
+#persistentvolumeclaim/mongo-pvc created
 ```
 ## Login to the MongoDB Pod and the DB in the Kubernetes Cluster
 ```
+kubectl exec -it mongod sh
+
 root@mongo-depl-79948c9979-dvjcq:/# mongo mongodb://localhost:27017
 MongoDB shell version v5.0.5
 connecting to: mongodb://localhost:27017/?compressors=disabled&gssapiServiceName=mongodb
