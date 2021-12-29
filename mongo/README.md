@@ -1,10 +1,11 @@
 # Step by step doc to create a quick & simple Stateful deployment of MongoDB in the Kubernetes Cluster
+## Created the MongoDB Deployment and the service
 ```
 jayadmin@cloudshell:~/mongodb (kubetrain-331123)$ kubectl apply -f mongod.yaml                                                                                                                                                                    
 statefulset.apps/mongodb-standalone unchanged
 service/database created
 ```
-
+## Login to the MongoDB Pod and the DB in the Kubernetes Cluster
 ```
 jayadmin@cloudshell:~/mongodb (kubetrain-331123)$ kubectl exec -it mongodb-standalone-0 sh
 kubectl exec [POD] [COMMAND] is DEPRECATED and will be removed in a future version. Use kubectl exec [POD] -- [COMMAND] instead.
