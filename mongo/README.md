@@ -1,4 +1,4 @@
-# step by step doc
+# Step by step doc to create a quick & simple Stateful deployment of MongoDB in the Kubernetes Cluster
 ```
 jayadmin@cloudshell:~/mongodb (kubetrain-331123)$ kubectl apply -f mongod.yaml                                                                                                                                                                    
 statefulset.apps/mongodb-standalone unchanged
